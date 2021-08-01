@@ -1,0 +1,7 @@
+cmd: "g++ {FILE_ACTIVE} -o build/{FILE_ACTIVE_NAME_BASE} -L./lib -lGL -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -ldl -lXinerama -lXcursor -Wall"
+name: "Build Linux"
+cwd: "{PROJECT_PATH}"
+targets:
+  "Build Windows":
+    cmd: "g++ {FILE_ACTIVE} -o build/{FILE_ACTIVE_NAME_BASE} -L./winlib -lglfw3 -licon -lgdi32 -Wall -m64 -static"
+    cwd: "{PROJECT_PATH}"
